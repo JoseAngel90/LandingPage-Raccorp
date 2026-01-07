@@ -1,277 +1,1182 @@
-<!-- home.html -->
- <section id="home" class="home">
-    <header class="video_portada">
-  <!-- Video optimizado: webm + mp4, SIN controls para ocultar botones nativos -->
-  <video id="heroVideo" class="hero-video__media"
-         autoplay muted loop playsinline preload="auto"
-         poster="assets/portada.gif" role="img" aria-label="Video de portada">
-    <source src="assets/portada.gif" type="video/webm">
-    <source src="assets/portada.gif" type="video/mp4">
-    <!-- Fallback: mostrar GIF si el navegador no reproduce el video -->
-    <img src="assets/portada.gif" alt="Portada animada" class="hero-video__fallback">
-    Tu navegador no soporta video.
-  </video>
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
-  <div id="contenedortexto" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 64px);text-align:center;">
-    ¡Transforma la experiencia escolar!
-    <div id="flip">
-      <div><div>Seguimiento</div></div>
-      <div><div>Rangos</div></div>
-      <div><div>Éxito</div></div>
-    </div>
-    ¡Motiva y reconoce el progreso de cada alumno!
-  </div>
-</header>
- </section>
+<!-- SCRIPT GLOBAL AL INICIO -->
+<script>
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+</script>
 
+<!-- HERO SECTION MODERNO -->
+<section class="hero-new" id="home">
+  <div class="hero-grid-new">
+    <div class="hero-content-new">
+      <span class="hero-badge">
+        <i class="bi bi-lightning-fill"></i> Bienvenido a Raccorp
+      </span>
+      <h1 class="hero-title-new">
+        Soluciones Digitales<br>
+        <span class="gradient-text">De Próxima Generación</span>
+      </h1>
+      <p class="hero-subtitle-new">Transformamos tu visión en soluciones tecnológicas innovadoras que generan resultados reales y medibles</p>
+      <!-- Reemplaza los botones del HERO con estos -->
+      <div class="hero-buttons-new">
+        <a href="#contact-section" class="btn-primary-new" style="text-decoration: none;">
+          <i class="bi bi-rocket-takeoff"></i> Iniciar Proyecto
+        </a>
 
-<section id="Facilidad" class="facilidad">
-  
-  <!-- Texto principal (mejor diseño, minimalista) -->
-    <div class="container">
-      <div id="textos" class="textos">
-        <h1>¿Creado para facilitarte la gestión educativa?</h1>
-        <p class="lead">Este sistema permite a los administradores y docentes llevar un control completo de los alumnos, calificaciones, y reportes. Ofrece una interfaz intuitiva y moderna para facilitar la gestión académica.</p>
+        <a href="#services-section" class="btn-secondary-new" style="text-decoration: none;">
+          <i class="bi bi-arrow-right"></i> Explorar Servicios
+        </a>
+
       </div>
-
-      <!-- Características -->
-      <div class="grid-container">
-        <div class="card">
-          <div style="display:flex;gap:12px;align-items:center">
-            <div class="title">Eficiencia</div>
-            <div class="icon" aria-hidden="true"><i class="fa fa-bolt"></i></div>
+      <div class="hero-metrics">
+        <div class="metric">
+          <div class="metric-icon">
+            <i class="bi bi-briefcase-fill"></i>
           </div>
-          <div class="content"><p>Centraliza la información y reduce el tiempo de gestión académica.</p></div>
+          <h3>10+</h3>
+          <p>Proyectos</p>
         </div>
-
-        <div class="card">
-          <div style="display:flex;gap:12px;align-items:center">
-            <div class="title">Fácil de usar</div>
-            <div class="icon" aria-hidden="true"><i class="fa fa-user-check"></i></div>
+        <div class="metric">
+          <div class="metric-icon">
+            <i class="bi bi-people-fill"></i>
           </div>
-          <div class="content"><p>Interfaz intuitiva que facilita la adaptación de docentes y administradores.</p></div>
+          <h3>25+</h3>
+          <p>Clientes</p>
         </div>
-
-        <div class="card">
-          <div style="display:flex;gap:12px;align-items:center">
-            <div class="title">Accesibilidad</div>
-            <div class="icon" aria-hidden="true"><i class="fa fa-globe"></i></div>
+        <div class="metric">
+          <div class="metric-icon">
+            <i class="bi bi-award-fill"></i>
           </div>
-          <div class="content"><p>Accesible desde cualquier dispositivo para gestión flexible y eficiente.</p></div>
+          <h3>2+</h3>
+          <p>Años</p>
         </div>
       </div>
     </div>
-
-    <section class="gestor-section">
-  <h1>¡Explora el Gestor Escolar!</h1>
-  <div class="gestor-grid">
-    <div class="gestor-card">
-      <img src="assets/Publicidad_1.png" alt="Impulsa el conocimiento">
-    </div>
-    <div class="gestor-card">
-      <img src="assets/Publicidad_2.png" alt="Impulsa el conocimiento">
-    </div>
-  </div>
-</section>
-
-
-</section>
-
-<section id="multimedia" class="multimedia">
-  <section class="nature-section">
-    <h1>Control de acceso</h1>
-    <div class="content">
-      <p>Gestiona quién tiene acceso a qué recursos dentro de la plataforma educativa.</p>
-    </div>
-    <div class="img">
-      <img src="assets/Inicio_sesion.png" alt="Inicio de sesión">
-    </div>
-  </section>
-  <section class="nature-section">
-    <h1>Panel de administradores</h1>
-    <div class="content">
-      <p>Los administradores pueden gestionar usuarios aprobándolos, asignar nuevos administradores para el acceso a la plataforma.</p>
-    </div>
-    <div class="img">
-      <img src="assets/Administrador.png" alt="Inicio de sesión">
-    </div>
-  </section>
-
-
-<div class="container-fluid text-center" style="margin-top: 2rem;">
-  <h1 style="color: #007bff;">Ve nuestro video de demostracion del gestor !</h1>
-  <video class="video_presentacion" controls>
-    <source src="assets/video-presentacion_comprimido.mp4" type="video/mp4">
-  </video>
-</div>
-
-
-<div class="container-fluid text-center" style="margin-top: 2rem;">
-  <h3>Descarga un ejemplo de boleta</h3>
-  <p>Haz clic en el botón para obtener un archivo de ejemplo con el formato de boletas.</p>
-    <!-- Botón de descarga -->
-    <a href="assets/acta_calificaciones_2_B_2025-09.pdf" download>
-      <button class="download-btn noselect">
-        <span class="btn-text">Descargar</span>
-        <span class="btn-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/>
-          </svg>
-        </span>
-        <span class="download-animation"></span>
-      </button>
-    </a>
-  </div>
-</section>
-
-
-
-<section id="testimonios" class="testimonios">
-  <div class="container">
-    <h2 class="testimonials-title">Lo que dicen nuestros usuarios</h2>
-
-    <div class="outerdiv">
-      <div class="innerdiv">
-        <!-- Testimonio 1 -->
-        <div class="div1 eachdiv">
-          <div class="userdetails">
-            <div class="imgbox">
-              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
-            </div>
-            <div class="detbox">
-              <p class="name">Luis Martínez</p>
-              <p class="designation">Profesor</p>
-            </div>
-          </div>
-          <div class="review">
-            <h4>Mejora la gestión escolar notablemente</h4>
-            <p>“El sistema permite centralizar la información de alumnos y clases, lo que ahorra muchísimo tiempo en la administración y planificación educativa.”</p>
-          </div>
+    <div class="hero-visual-new">
+      <div class="floating-element element-1"></div>
+      <div class="floating-element element-2"></div>
+      <div class="floating-element element-3"></div>
+      <div class="hero-card-visual">
+        <div class="card-item">
+          <i class="bi bi-code-square"></i>
+          <span>Code</span>
         </div>
-        
-        <!-- Testimonio 2 -->
-        <div class="div2 eachdiv">
-          <div class="userdetails">
-            <div class="imgbox">
-              <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="">
-            </div>
-            <div class="detbox">
-              <p class="name">Ana Gómez</p>
-              <p class="designation">Directora</p>
-            </div>
-          </div>
-          <div class="review">
-            <h4>Fácil de usar y muy intuitivo</h4>
-            <p>“Desde el primer día, tanto docentes como administradores se adaptaron al sistema. La interfaz es clara y la navegación muy sencilla.”</p>
-          </div>
+        <div class="card-item">
+          <i class="bi bi-palette2"></i>
+          <span>Design</span>
+        </div>
+        <div class="card-item">
+          <i class="bi bi-gear-fill"></i>
+          <span>Deploy</span>
         </div>
 
-        <!-- Testimonio 3 -->
-        <div class="div3 eachdiv">
-          <div class="userdetails">
-            <div class="imgbox">
-              <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="">
-            </div>
-            <div class="detbox">
-              <p class="name dark">Carlos Pérez</p>
-              <p class="designation dark">Estudiante</p>
-            </div>
-          </div>
-          <div class="review dark">
-            <h4>Motivador y moderno</h4>
-            <p>“Me encanta el sistema de rangos estudiantiles. Me motiva a mejorar mis calificaciones y participar más en clase.”</p>
-          </div>
-        </div>
-
-        <!-- Testimonio 4 -->
-        <div class="div4 eachdiv">
-          <div class="userdetails">
-            <div class="imgbox">
-              <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="">
-            </div>
-            <div class="detbox">
-              <p class="name dark">María López</p>
-              <p class="designation dark">Padre de familia</p>
-            </div>
-          </div>
-          <div class="review dark">
-            <h4>Información siempre disponible</h4>
-            <p>“Puedo revisar calificaciones, tareas y asistencia de mis hijos desde cualquier dispositivo, lo que me da tranquilidad y control.”</p>
-          </div>
-        </div>
-
-        <!-- Testimonio 5 -->
-        <div class="div5 eachdiv">
-          <div class="userdetails">
-            <div class="imgbox">
-              <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="">
-            </div>
-            <div class="detbox">
-              <p class="name">Fernando Ruiz</p>
-              <p class="designation">Coordinador académico</p>
-            </div>
-          </div>
-          <div class="review">
-            <h4>Todo en un solo lugar</h4>
-            <p>“Gestionar calificaciones, reportes y seguimiento estudiantil es mucho más sencillo. El sistema optimiza nuestros procesos administrativos.”</p>
-          </div>
+        <div class="hero-logo">
+          <img src="assets/raccorp.png" alt="Raccorp Logo">
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CARACTERÍSTICAS SECTION -->
+<section class="features-new" id="features-section">
+  <div class="container-new">
+    <div class="section-header-new">
+      <h2>¿Por Qué Elegirnos?</h2>
+      <div class="header-divider"></div>
+      <p>Características que nos hacen líderes en la industria</p>
+    </div>
+    <div class="features-grid-new">
+      <div class="feature-item-new feature-card-hex">
+        <div class="feature-icon-new icon-wrapper">
+          <i class="bi bi-lightning-charge-fill"></i>
+        </div>
+        <h3>Velocidad</h3>
+        <p>Desarrollo ágil sin sacrificar calidad en resultados</p>
+        <div class="feature-accent"></div>
+      </div>
+      <div class="feature-item-new feature-card-hex">
+        <div class="feature-icon-new icon-wrapper">
+          <i class="bi bi-bullseye"></i>
+        </div>
+        <h3>Precisión</h3>
+        <p>Soluciones ajustadas a tus necesidades específicas</p>
+        <div class="feature-accent"></div>
+      </div>
+      <div class="feature-item-new feature-card-hex">
+        <div class="feature-icon-new icon-wrapper">
+          <i class="bi bi-shield-lock-fill"></i>
+        </div>
+        <h3>Seguridad</h3>
+        <p>Protección de datos de primera clase certificada</p>
+        <div class="feature-accent"></div>
+      </div>
+      <div class="feature-item-new feature-card-hex">
+        <div class="feature-icon-new icon-wrapper">
+          <i class="bi bi-graph-up-arrow"></i>
+        </div>
+        <h3>Escalable</h3>
+        <p>Crece con tu negocio sin límites técnicos</p>
+        <div class="feature-accent"></div>
+      </div>
+      <div class="feature-item-new feature-card-hex">
+        <div class="feature-icon-new icon-wrapper">
+          <i class="bi bi-palette-fill"></i>
+        </div>
+        <h3>Diseño</h3>
+        <p>Interfaces modernas y atractivas premium</p>
+        <div class="feature-accent"></div>
+      </div>
+      <div class="feature-item-new feature-card-hex">
+        <div class="feature-icon-new icon-wrapper">
+          <i class="bi bi-headset"></i>
+        </div>
+        <h3>Soporte 24/7</h3>
+        <p>Equipo disponible siempre para ti</p>
+        <div class="feature-accent"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<section class="contact-section" id="contacto">
-  <div class="contact-grid">
-    <!-- Contenedor del formulario -->
-    <div class="contact-wrapper">
-      <!-- Títulos -->
-      <h2>Contáctanos</h2>
-      <p class="muted">¿Tienes dudas o sugerencias? Envíanos un mensaje y te responderemos pronto.</p>
+<!-- SERVICIOS SECTION -->
+<!-- SERVICIOS SECTION -->
+<section class="services-new" id="services-section">
+  <div class="container-new">
+    <div class="section-header-new">
+      <h2>Servicios Especializados</h2>
+      <div class="header-divider"></div>
+      <p>Soluciones integrales para tu transformación digital</p>
+    </div>
+    <div class="services-grid-new">
+      <div class="service-card-new service-card-slanted">
+        <div class="service-badge">01</div>
+        <div class="service-icon-new icon-circle">
+          <i class="bi bi-browser-chrome"></i>
+        </div>
+        <h3>Desarrollo Web</h3>
+        <p>Aplicaciones web modernas, rápidas y seguras con React, Vue o Angular</p>
+        <ul class="service-list">
+          <li><i class="bi bi-check-circle-fill"></i> Frontend Avanzado</li>
+          <li><i class="bi bi-check-circle-fill"></i> APIs Escalables</li>
+          <li><i class="bi bi-check-circle-fill"></i> Integración SEO</li>
+        </ul>
+        <div class="service-divider"></div>
+      </div>
 
-      <!-- Formulario -->
-      <form id="contactForm" class="contact-form" action="https://formspree.io/f/mldwzddo" method="POST" novalidate>
-        <input type="text" name="name" id="name" placeholder="Tu nombre" required />
-        <input type="email" name="email" id="email" placeholder="correo@ejemplo.com" required />
-        <textarea name="message" id="message" rows="6" placeholder="Escribe tu mensaje" required></textarea>
+      <div class="service-card-new service-card-slanted">
+        <div class="service-badge">02</div>
+        <div class="service-icon-new icon-circle">
+          <i class="bi bi-phone"></i>
+        </div>
+        <h3>Apps Móviles</h3>
+        <p>Aplicaciones nativas y multiplataforma de alto rendimiento</p>
+        <ul class="service-list">
+          <li><i class="bi bi-check-circle-fill"></i> iOS & Android</li>
+          <li><i class="bi bi-check-circle-fill"></i> React Native</li>
+          <li><i class="bi bi-check-circle-fill"></i> Push Notifications</li>
+        </ul>
+        <div class="service-divider"></div>
+      </div>
+
+      <div class="service-card-new service-card-slanted">
+        <div class="service-badge">03</div>
+        <div class="service-icon-new icon-circle">
+          <i class="bi bi-palette"></i>
+        </div>
+        <h3>Diseño & UX</h3>
+        <p>Interfaces intuitivas y hermosas que tus usuarios amarán</p>
+        <ul class="service-list">
+          <li><i class="bi bi-check-circle-fill"></i> UI/UX Design</li>
+          <li><i class="bi bi-check-circle-fill"></i> Prototipado</li>
+          <li><i class="bi bi-check-circle-fill"></i> User Research</li>
+        </ul>
+        <div class="service-divider"></div>
+      </div>
+
+      <div class="service-card-new service-card-slanted">
+        <div class="service-badge">04</div>
+        <div class="service-icon-new icon-circle">
+          <i class="bi bi-graph-up"></i>
+        </div>
+        <h3>Data Analytics</h3>
+        <p>Dashboards inteligentes para tomar decisiones basadas en datos</p>
+        <ul class="service-list">
+          <li><i class="bi bi-check-circle-fill"></i> Business Intelligence</li>
+          <li><i class="bi bi-check-circle-fill"></i> Real-time Analytics</li>
+          <li><i class="bi bi-check-circle-fill"></i> Data Visualization</li>
+        </ul>
+        <div class="service-divider"></div>
+      </div>
+
+      <div class="service-card-new service-card-slanted">
+        <div class="service-badge">05</div>
+        <div class="service-icon-new icon-circle">
+          <i class="bi bi-cloud-check"></i>
+        </div>
+        <h3>DevOps & Cloud</h3>
+        <p>Infraestructura escalable en la nube con máxima disponibilidad</p>
+        <ul class="service-list">
+          <li><i class="bi bi-check-circle-fill"></i> AWS & Google Cloud</li>
+          <li><i class="bi bi-check-circle-fill"></i> Docker & Kubernetes</li>
+          <li><i class="bi bi-check-circle-fill"></i> CI/CD Pipeline</li>
+        </ul>
+        <div class="service-divider"></div>
+      </div>
+
+      <div class="service-card-new service-card-slanted">
+        <div class="service-badge">06</div>
+        <div class="service-icon-new icon-circle">
+          <i class="bi bi-lock-fill"></i>
+        </div>
+        <h3>Seguridad</h3>
+        <p>Protección completa de tus datos con estándares internacionales</p>
+        <ul class="service-list">
+          <li><i class="bi bi-check-circle-fill"></i> Encriptación SSL</li>
+          <li><i class="bi bi-check-circle-fill"></i> Auditorías</li>
+          <li><i class="bi bi-check-circle-fill"></i> Compliance GDPR</li>
+        </ul>
+        <div class="service-divider"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- PROCESO SECTION - NUEVO DISEÑO -->
+<section class="process-new" id="process-section">
+  <div class="container-new">
+    <div class="section-header-new">
+      <h2>Nuestro Proceso</h2>
+      <div class="header-divider"></div>
+      <p>Metodología probada para garantizar tu éxito</p>
+    </div>
+    
+    <!-- TIMELINE VERTICAL INTERACTIVO -->
+    <div class="process-timeline-vertical">
+      <div class="timeline-line"></div>
       
-        <!-- honeypot anti-spam -->
-        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-
-        <div class="form-actions" style="display: flex; gap: 12px; align-items: center; justify-content: flex-start;">
-          <button type="submit" class="btn btn-primary">Enviar</button>
-          <a href="https://wa.me/5212461265600?text=Hola%20quiero%20mas%20información%20de%20servicios." target="_blank" rel="noopener" class="btn-whatsapp" aria-label="Contactar por WhatsApp">
-            <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:10px;fill:currentColor">
-              <path d="M20.52 3.48A11.94 11.94 0 0012 .5C5.73.5.99 5.24.99 11.5c0 2.04.54 3.95 1.57 5.63L.5 23.5l6.56-1.72A11.95 11.95 0 0012 23.5c6.27 0 11.01-4.74 11.01-11 0-2.95-1.16-5.71-3.49-7.02zM12 21.5c-1.72 0-3.36-.46-4.78-1.33l-.34-.2-3.9 1.03 1.03-3.8-.22-.35A9.2 9.2 0 012.8 11.5 9.2 9.2 0 1111.96 20.5zM17.2 14.3c-.27-.14-1.6-.8-1.85-.89-.25-.09-.43-.14-.62.14-.19.28-.74.89-.9 1.07-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.58-1.5-1.86-.16-.28-.02-.43.12-.57.12-.12.27-.32.41-.48.14-.16.19-.27.28-.45.09-.18.05-.34-.02-.48-.07-.14-.62-1.5-.85-2.07-.22-.54-.45-.46-.62-.47l-.53-.01c-.18 0-.47.07-.72.34-.25.27-.96.93-.96 2.27s.98 2.63 1.12 2.81c.14.18 1.93 2.95 4.67 4.02 3.25 1.27 3.25.85 3.84.8.6-.05 1.95-.8 2.23-1.57.28-.77.28-1.43.2-1.56-.08-.13-.28-.19-.56-.33z"/>
-            </svg>
-            <span>WhatsApp</span>
-          </a>
+      <div class="process-step process-step-v1">
+        <div class="step-content">
+          <div class="step-circle step-circle-1">
+            <div class="circle-inner">
+              <i class="bi bi-search"></i>
+            </div>
+            <div class="circle-pulse"></div>
+          </div>
+          <div class="step-text">
+            <div class="step-tag">FASE 01</div>
+            <h3>Descubrimiento</h3>
+            <p>Entendemos profundamente tu negocio, objetivos, desafíos y visión a largo plazo. Realizamos auditorías completas y análisis de competencia.</p>
+            <ul class="step-features">
+              <li><i class="bi bi-check2-circle"></i> Análisis de Requisitos</li>
+              <li><i class="bi bi-check2-circle"></i> Estudio de Mercado</li>
+              <li><i class="bi bi-check2-circle"></i> Definición de Objetivos</li>
+            </ul>
+          </div>
         </div>
-        <div id="formStatus" class="form-status" aria-live="polite" hidden></div>
+      </div>
+
+      <div class="process-step process-step-v2">
+        <div class="step-content">
+          <div class="step-circle step-circle-2">
+            <div class="circle-inner">
+              <i class="bi bi-lightbulb"></i>
+            </div>
+            <div class="circle-pulse"></div>
+          </div>
+          <div class="step-text">
+            <div class="step-tag">FASE 02</div>
+            <h3>Estrategia</h3>
+            <p>Diseñamos la solución perfecta basada en mejores prácticas, tendencias tecnológicas y casos de éxito. Creamos una hoja de ruta clara.</p>
+            <ul class="step-features">
+              <li><i class="bi bi-check2-circle"></i> Diseño Arquitectónico</li>
+              <li><i class="bi bi-check2-circle"></i> Prototipado</li>
+              <li><i class="bi bi-check2-circle"></i> Planning Detallado</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step process-step-v3">
+        <div class="step-content">
+          <div class="step-circle step-circle-3">
+            <div class="circle-inner">
+              <i class="bi bi-hammer"></i>
+            </div>
+            <div class="circle-pulse"></div>
+          </div>
+          <div class="step-text">
+            <div class="step-tag">FASE 03</div>
+            <h3>Desarrollo</h3>
+            <p>Construimos con código limpio, seguro y escalable. Implementamos usando metodologías ágiles con sprints y entregas incrementales.</p>
+            <ul class="step-features">
+              <li><i class="bi bi-check2-circle"></i> Desarrollo Ágil</li>
+              <li><i class="bi bi-check2-circle"></i> Testing Continuo</li>
+              <li><i class="bi bi-check2-circle"></i> Code Review</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step process-step-v4">
+        <div class="step-content">
+          <div class="step-circle step-circle-4">
+            <div class="circle-inner">
+              <i class="bi bi-rocket-fill"></i>
+            </div>
+            <div class="circle-pulse"></div>
+          </div>
+          <div class="step-text">
+            <div class="step-tag">FASE 04</div>
+            <h3>Lanzamiento & Soporte</h3>
+            <p>Entrega y soporte completo en cada fase. Monitoreo continuo, optimización de performance y actualizaciones según necesidad.</p>
+            <ul class="step-features">
+              <li><i class="bi bi-check2-circle"></i> Deployment</li>
+              <li><i class="bi bi-check2-circle"></i> Monitoreo 24/7</li>
+              <li><i class="bi bi-check2-circle"></i> Soporte Permanente</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LÍNEA DE TIEMPO HORIZONTAL ALTERNATIVA -->
+    <div class="process-horizontal-timeline">
+      <div class="timeline-track">
+        <div class="timeline-progress"></div>
+      </div>
+      
+      <div class="timeline-steps-horizontal">
+        <div class="timeline-step-h timeline-step-h1" data-step="1">
+          <div class="step-dot">
+            <i class="bi bi-search"></i>
+          </div>
+          <span>Descubrimiento</span>
+        </div>
+        <div class="timeline-step-h timeline-step-h2" data-step="2">
+          <div class="step-dot">
+            <i class="bi bi-lightbulb"></i>
+          </div>
+          <span>Estrategia</span>
+        </div>
+        <div class="timeline-step-h timeline-step-h3" data-step="3">
+          <div class="step-dot">
+            <i class="bi bi-hammer"></i>
+          </div>
+          <span>Desarrollo</span>
+        </div>
+        <div class="timeline-step-h timeline-step-h4" data-step="4">
+          <div class="step-dot">
+            <i class="bi bi-rocket-fill"></i>
+          </div>
+          <span>Lanzamiento</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ESTADÍSTICAS DEL PROCESO -->
+    <div class="process-stats">
+      <div class="stat-card stat-card-1">
+        <i class="bi bi-calendar3"></i>
+        <h4>4-12 Semanas</h4>
+        <p>Duración promedio según complejidad</p>
+      </div>
+      <div class="stat-card stat-card-2">
+        <i class="bi bi-people-fill"></i>
+        <h4>Equipo Dedicado</h4>
+        <p>Profesionales expertos en tu proyecto</p>
+      </div>
+      <div class="stat-card stat-card-3">
+        <i class="bi bi-chat-dots-fill"></i>
+        <h4>Comunicación Constante</h4>
+        <p>Reportes semanales y reuniones</p>
+      </div>
+      <div class="stat-card stat-card-4">
+        <i class="bi bi-shield-check"></i>
+        <h4>100% Garantizado</h4>
+        <p>Satisfacción o reembolso</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS SECTION -->
+<section class="projects-new" id="projects-section">
+  <div class="container-new">
+    <div class="section-header-new">
+      <h2>Casos de Éxito</h2>
+      <div class="header-divider"></div>
+      <p>Proyectos que transformaron negocios</p>
+    </div>
+    
+    <!-- MASONRY GRID MODERNO -->
+    <div class="projects-grid-new">
+      
+      <!-- PROYECTO GRANDE DESTACADO -->
+           <!-- PROYECTO GRANDE DESTACADO -->
+      <div class="project-item-new project-card-modern project-large">
+        <div class="project-bg project-bg-ecommerce" style="background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.5), rgba(59, 130, 246, 0.3)), url('assets/Ollita.png');"></div>
+        <div class="project-shine"></div>
+        <div class="project-overlay"></div>
+        <div class="project-content">
+          <div class="project-badge">Destacado</div>
+          <div class="project-icon"><i class="bi bi-shop"></i></div>
+          <h3>Plataforma de apartador "La ollita"</h3>
+          <p>Gestion online que aumentó la eficiencia</p>
+          <div class="project-tags-new">
+            <span><i class="bi bi-tag-fill"></i> Angular</span>
+            <span><i class="bi bi-tag-fill"></i> Laravel</span>
+            <span><i class="bi bi-tag-fill"></i> MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROYECTO MEDIANO -->
+      <div class="project-item-new project-card-modern">
+        <div class="project-bg project-bg-educativa"></div>
+        <div class="project-bg project-bg-ecommerce" style="background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.5), rgba(59, 130, 246, 0.3)), url('assets/SistemaEscolar.png');"></div>
+        <div class="project-shine"></div>
+        <div class="project-overlay"></div>
+        <div class="project-content">
+          <div class="project-icon"><i class="bi bi-book"></i></div>
+          <h3>App Educativa</h3>
+          <p>Plataforma con 50K usuarios activos</p>
+          <div class="project-result">
+            <i class="bi bi-check-circle-fill"></i>
+            <span>4.8★ Rating</span>
+          </div>
+          <div class="project-tags-new">
+            <span><i class="bi bi-tag-fill"></i> Angular</span>
+            <span><i class="bi bi-tag-fill"></i> Laravel</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROYECTO MEDIANO -->
+      <div class="project-item-new project-card-modern">
+        <div class="project-bg project-bg-analytics"></div>
+        <div class="project-bg project-bg-ecommerce" style="background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.5), rgba(59, 130, 246, 0.3)), url('assets/Mexgas.png');"></div>
+        <div class="project-shine"></div>
+        <div class="project-overlay"></div>
+        <div class="project-content">
+          <div class="project-icon"><i class="bi bi-bar-chart-fill"></i></div>
+          <h3>Landing page</h3>
+          <p>MexGas</p>
+          <div class="project-result">
+            <i class="bi bi-lightning-fill"></i>
+            <span>Real-time</span>
+          </div>
+          <div class="project-tags-new">
+            <span><i class="bi bi-tag-fill"></i> WordPress</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROYECTO NUEVO -->
+      <div class="project-item-new project-card-modern">
+        <div class="project-bg project-bg-rrhh"></div>
+        <div class="project-bg project-bg-ecommerce" style="background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.5), rgba(59, 130, 246, 0.3)), url('assets/OrganicSpa.png');"></div>
+        <div class="project-shine"></div>
+        <div class="project-overlay"></div>
+        <div class="project-content">
+          <div class="project-icon"><i class="bi bi-briefcase"></i></div>
+          <h3>Tienda Online</h3>
+          <p>Aumento de ventas</p>
+          <div class="project-result">
+            <i class="bi bi-people-fill"></i>
+            <span>100+ De Ventas</span>
+          </div>
+          <div class="project-tags-new">
+            <span><i class="bi bi-tag-fill"></i> WordPress</span>
+            <span><i class="bi bi-tag-fill"></i> PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROYECTO NUEVO -->
+      <div class="project-item-new project-card-modern">
+        <div class="project-bg project-bg-musica"></div>
+        <div class="project-bg project-bg-ecommerce" style="background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.5), rgba(59, 130, 246, 0.3)), url('assets/Supply.png');"></div>
+        <div class="project-shine"></div>
+        <div class="project-overlay"></div>
+        <div class="project-content">
+          <div class="project-icon"><i class="bi bi-music-note-beamed"></i></div>
+          <h3>Landing Page</h3>
+          <p>Supply</p>
+          <div class="project-result">
+            <i class="bi bi-play-circle-fill"></i>
+            <span>Mas vistas en poco tiempo</span>
+          </div>
+          <div class="project-tags-new">
+            <span><i class="bi bi-tag-fill"></i> WordPress</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROYECTO NUEVO -->
+      <div class="project-item-new project-card-modern project-large">
+        <div class="project-bg project-bg-telemedicina"></div>
+        <div class="project-bg project-bg-ecommerce" style="background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.5), rgba(59, 130, 246, 0.3)), url('assets/Solidia.png');"></div>
+        <div class="project-shine"></div>
+        <div class="project-overlay"></div>
+        <div class="project-content">
+          <div class="project-badge">Ganador de Premio</div>
+          <div class="project-icon"><i class="bi bi-hospital"></i></div>
+          <h3>Plataforma de valances</h3>
+          <p>Conexión entre usuarios y datos en tiempo real</p>
+          <div class="project-tags-new">
+            <span><i class="bi bi-tag-fill"></i> Angular</span>
+            <span><i class="bi bi-tag-fill"></i> Laravel</span>
+            <span><i class="bi bi-tag-fill"></i> MySQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTÓN VER MÁS -->
+    <div class="projects-cta">
+      <!-- <button class="btn-secondary-new">
+        <i class="bi bi-arrow-right"></i> Ver Más Proyectos
+      </button> -->
+    </div>
+  </div>
+</section>
+
+
+
+<!-- TESTIMONIOS SECTION - MEJORADO -->
+<section class="testimonials-new" id="testimonios">
+  <div class="container-new">
+    <div class="section-header-new">
+      <h2>Lo Que Dicen Nuestros Clientes</h2>
+      <div class="header-divider"></div>
+      <p>Testimonios reales de empresas que confían en nosotros</p>
+    </div>
+
+    <!-- CAROUSEL DE TESTIMONIOS -->
+    <div class="testimonials-container">
+      <div class="testimonials-grid-new">
+        
+        <!-- TESTIMONIO 1 -->
+        <div class="testimonial-card-new testimonial-card-modern testimonial-featured">
+          <div class="testimonial-bg"></div>
+          <div class="testimonial-inner">
+            <div class="testimonial-icon">
+              <i class="bi bi-quote"></i>
+            </div>
+            <div class="testimonial-header">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <p>"El mejor equipo con el que he trabajado. Profesionales, rápidos y con excelentes resultados. Entendieron perfectamente nuestra visión."</p>
+            <div class="author-new">
+              <div class="avatar">
+                <i class="bi bi-person-circle"></i>
+              </div>
+              <div>
+                <h4>Juan Carlos López</h4>
+                <span><i class="bi bi-building"></i> CEO Tech Startup</span>
+                <div class="company-logo">Startup XYZ</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TESTIMONIO 2 -->
+        <div class="testimonial-card-new testimonial-card-modern">
+          <div class="testimonial-bg"></div>
+          <div class="testimonial-inner">
+            <div class="testimonial-icon">
+              <i class="bi bi-quote"></i>
+            </div>
+            <div class="testimonial-header">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <p>"Transformaron completamente nuestra plataforma. El resultado superó todas nuestras expectativas. Entrega a tiempo y excelente calidad."</p>
+            <div class="author-new">
+              <div class="avatar">
+                <i class="bi bi-person-circle"></i>
+              </div>
+              <div>
+                <h4>María González</h4>
+                <span><i class="bi bi-briefcase"></i> Product Manager</span>
+                <div class="company-logo">E-Commerce Co</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TESTIMONIO 3 -->
+        <div class="testimonial-card-new testimonial-card-modern">
+          <div class="testimonial-bg"></div>
+          <div class="testimonial-inner">
+            <div class="testimonial-icon">
+              <i class="bi bi-quote"></i>
+            </div>
+            <div class="testimonial-header">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <p>"La mejor inversión que hicimos. Ahora tenemos una app moderna, segura y escalable. El equipo fue muy atento con nuestras necesidades."</p>
+            <div class="author-new">
+              <div class="avatar">
+                <i class="bi bi-person-circle"></i>
+              </div>
+              <div>
+                <h4>Juan Martínez</h4>
+                <span><i class="bi bi-star"></i> Emprendedor</span>
+                <div class="company-logo">Mobile Ventures</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TESTIMONIO 4 -->
+        <div class="testimonial-card-new testimonial-card-modern">
+          <div class="testimonial-bg"></div>
+          <div class="testimonial-inner">
+            <div class="testimonial-icon">
+              <i class="bi bi-quote"></i>
+            </div>
+            <div class="testimonial-header">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <p>"Profesionalismo sin igual. Desde la primera reunión nos mostró su experiencia. El soporte post-lanzamiento fue impecable."</p>
+            <div class="author-new">
+              <div class="avatar">
+                <i class="bi bi-person-circle"></i>
+              </div>
+              <div>
+                <h4>Carlos Rodríguez</h4>
+                <span><i class="bi bi-briefcase"></i> CTO Fintech</span>
+                <div class="company-logo">Finance Pro</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TESTIMONIO 5 -->
+        <div class="testimonial-card-new testimonial-card-modern">
+          <div class="testimonial-bg"></div>
+          <div class="testimonial-inner">
+            <div class="testimonial-icon">
+              <i class="bi bi-quote"></i>
+            </div>
+            <div class="testimonial-header">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <p>"Excelente comunicación durante todo el proyecto. Solucionaron problemas rápidamente y siempre con una actitud positiva."</p>
+            <div class="author-new">
+              <div class="avatar">
+                <i class="bi bi-person-circle"></i>
+              </div>
+              <div>
+                <h4>Ana Martínez</h4>
+                <span><i class="bi bi-building"></i> Directora General</span>
+                <div class="company-logo">Retail Solutions</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TESTIMONIO 6 -->
+        <div class="testimonial-card-new testimonial-card-modern">
+          <div class="testimonial-bg"></div>
+          <div class="testimonial-inner">
+            <div class="testimonial-icon">
+              <i class="bi bi-quote"></i>
+            </div>
+            <div class="testimonial-header">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <p>"Recomendamos 100% a Raccorp. Un equipo comprometido, creativo y con conocimiento profundo de tecnología. Simplemente el mejor."</p>
+            <div class="author-new">
+              <div class="avatar">
+                <i class="bi bi-person-circle"></i>
+              </div>
+              <div>
+                <h4>Roberto Silva</h4>
+                <span><i class="bi bi-briefcase"></i> Product Owner</span>
+                <div class="company-logo">Tech Innovate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- STATS DE TESTIMONIOS -->
+    <div class="testimonials-stats">
+      <div class="testimonial-stat">
+        <div class="stat-value">98%</div>
+        <div class="stat-text">Clientes Satisfechos</div>
+      </div>
+      <div class="testimonial-stat">
+        <div class="stat-value">4.8/5</div>
+        <div class="stat-text">Rating Promedio</div>
+      </div>
+      <div class="testimonial-stat">
+        <div class="stat-value">10+</div>
+        <div class="stat-text">Proyectos Exitosos</div>
+      </div>
+      <div class="testimonial-stat">
+        <div class="stat-value">2+</div>
+        <div class="stat-text">Años de Experiencia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STACK SECTION - MEJORADO -->
+<section class="stack-new" id="tech-section">
+  <div class="container-new">
+    <div class="section-header-new">
+      <h2>Tecnologías & Stack</h2>
+      <div class="header-divider"></div>
+      <p>Stack moderno y probado en producción</p>
+    </div>
+
+    <!-- CATEGORÍAS DE TECNOLOGÍAS -->
+    <div class="tech-categories">
+      
+      <!-- FRONTEND -->
+      <div class="tech-category">
+        <div class="category-header">
+          <i class="bi bi-palette2"></i>
+          <h3>Frontend</h3>
+        </div>
+        <div class="stack-grid-new">
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-gem"></i>
+            </div>
+            <span>React</span>
+            <div class="tech-level">Experto</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-hexagon-fill"></i>
+            </div>
+            <span>Vue.js</span>
+            <div class="tech-level">Avanzado</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-square-fill"></i>
+            </div>
+            <span>Angular</span>
+            <div class="tech-level">Avanzado</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-bootstrap-fill"></i>
+            </div>
+            <span>TypeScript</span>
+            <div class="tech-level">Experto</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BACKEND -->
+      <div class="tech-category">
+        <div class="category-header">
+          <i class="bi bi-gear-fill"></i>
+          <h3>Backend</h3>
+        </div>
+        <div class="stack-grid-new">
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-circle-fill"></i>
+            </div>
+            <span>Node.js</span>
+            <div class="tech-level">Experto</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-lightning-charge-fill"></i>
+            </div>
+            <span>Python</span>
+            <div class="tech-level">Avanzado</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-cup-hot"></i>
+            </div>
+            <span>Java</span>
+            <div class="tech-level">Avanzado</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-file-code"></i>
+            </div>
+            <span>PHP</span>
+            <div class="tech-level">Avanzado</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BASES DE DATOS -->
+      <div class="tech-category">
+        <div class="category-header">
+          <i class="bi bi-database-fill"></i>
+          <h3>Bases de Datos</h3>
+        </div>
+        <div class="stack-grid-new">
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-database-fill"></i>
+            </div>
+            <span>PostgreSQL</span>
+            <div class="tech-level">Experto</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-box"></i>
+            </div>
+            <span>MongoDB</span>
+            <div class="tech-level">Avanzado</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-speedometer2"></i>
+            </div>
+            <span>Redis</span>
+            <div class="tech-level">Avanzado</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-fire"></i>
+            </div>
+            <span>Firebase</span>
+            <div class="tech-level">Experto</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DEVOPS & CLOUD -->
+      <div class="tech-category">
+        <div class="category-header">
+          <i class="bi bi-cloud-fill"></i>
+          <h3>DevOps & Cloud</h3>
+        </div>
+        <div class="stack-grid-new">
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-cloud-fill"></i>
+            </div>
+            <span>AWS</span>
+            <div class="tech-level">Experto</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-clouds"></i>
+            </div>
+            <span>Google Cloud</span>
+            <div class="tech-level">Avanzado</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-box-seam"></i>
+            </div>
+            <span>Docker</span>
+            <div class="tech-level">Experto</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-diagram-3"></i>
+            </div>
+            <span>Kubernetes</span>
+            <div class="tech-level">Avanzado</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MÓVIL -->
+      <div class="tech-category">
+        <div class="category-header">
+          <i class="bi bi-phone"></i>
+          <h3>Desarrollo Móvil</h3>
+        </div>
+        <div class="stack-grid-new">
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-phone"></i>
+            </div>
+            <span>React Native</span>
+            <div class="tech-level">Experto</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-hammer"></i>
+            </div>
+            <span>Flutter</span>
+            <div class="tech-level">Avanzado</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-apple"></i>
+            </div>
+            <span>Swift</span>
+            <div class="tech-level">Avanzado</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-android2"></i>
+            </div>
+            <span>Kotlin</span>
+            <div class="tech-level">Avanzado</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERRAMIENTAS -->
+      <div class="tech-category">
+        <div class="category-header">
+          <i class="bi bi-tools"></i>
+          <h3>Herramientas & Librerías</h3>
+        </div>
+        <div class="stack-grid-new">
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-git"></i>
+            </div>
+            <span>Git/GitHub</span>
+            <div class="tech-level">Experto</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-graph-up"></i>
+            </div>
+            <span>Webpack</span>
+            <div class="tech-level">Avanzado</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-check-circle"></i>
+            </div>
+            <span>Jest & Testing</span>
+            <div class="tech-level">Experto</div>
+          </div>
+          <div class="tech-badge tech-card-hover">
+            <div class="tech-icon">
+              <i class="bi bi-diagram-2"></i>
+            </div>
+            <span>Figma</span>
+            <div class="tech-level">Avanzado</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CERTIFICACIONES -->
+    <div class="certifications-section">
+      <h3>Certificaciones & Partnerships</h3>
+      <div class="certifications-grid">
+        <div class="cert-badge">
+          <i class="bi bi-award-fill"></i>
+          <span>AWS Certified</span>
+        </div>
+        <div class="cert-badge">
+          <i class="bi bi-award-fill"></i>
+          <span>Google Partner</span>
+        </div>
+        <div class="cert-badge">
+          <i class="bi bi-award-fill"></i>
+          <span>ISO 27001</span>
+        </div>
+        <div class="cert-badge">
+          <i class="bi bi-award-fill"></i>
+          <span>GDPR Compliant</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-new" id="cta-section">
+  <div class="container-new">
+    <div class="cta-content-new cta-modern">
+      <div class="cta-icon">
+        <i class="bi bi-rocket-takeoff"></i>
+      </div>
+      <h2>¿Listo para tu Transformación Digital?</h2>
+      <p>Nuestro equipo experto está preparado para hacer realidad tu idea</p>
+      
+      <a href="#contact-section" class="btn-primary-new btn-large btn-cta" style="text-decoration: none;">
+        <i class="bi bi-telephone-fill"></i> Contáctanos Ahora
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO SECTION -->
+<section class="contact-new" id="contact-section">
+  <div class="container-new">
+    <div class="section-header-new">
+      <h2>Cuéntanos Tu Idea</h2>
+      <div class="header-divider"></div>
+      <p>Responderemos en menos de 24 horas</p>
+    </div>
+    <div class="contact-wrapper">
+      <form class="contact-form-new contact-form-modern" id="contactForm" action="https://formspree.io/f/mldwzddo" method="POST">
+        <div class="form-row-new">
+          <div class="form-group">
+            <label><i class="bi bi-person-fill"></i> Nombre</label>
+            <input type="text" placeholder="Tu nombre completo" name="name" required>
+          </div>
+          <div class="form-group">
+            <label><i class="bi bi-envelope-fill"></i> Email</label>
+            <input type="email" placeholder="tu@email.com" name="email" required>
+          </div>
+        </div>
+        <div class="form-row-new">
+          <div class="form-group">
+            <label><i class="bi bi-telephone-fill"></i> Teléfono</label>
+            <input type="tel" placeholder="Tu teléfono (opcional)" name="phone">
+          </div>
+          <div class="form-group">
+            <label><i class="bi bi-building"></i> Empresa</label>
+            <input type="text" placeholder="Nombre de tu empresa" name="company" required>
+          </div>
+        </div>
+        <div class="form-group full-width">
+          <label><i class="bi bi-chat-dots-fill"></i> Mensaje</label>
+          <textarea placeholder="Cuéntanos sobre tu proyecto y qué esperas lograr..." name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary-new btn-large btn-submit">
+          <i class="bi bi-send-fill"></i> Enviar Propuesta
+        </button>
+        <div id="formStatus" class="form-status-new" hidden></div>
       </form>
     </div>
   </div>
 </section>
 
-      <script>
-        (function(){
-          const form = document.getElementById('contactForm');
-          const status = document.getElementById('formStatus');
-          if(!form) return;
-          form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            status.hidden = false; status.textContent = 'Enviando…';
-            const data = new FormData(form);
-            try {
-              const res = await fetch(form.action, { method: form.method, body: data, headers: { 'Accept': 'application/json' } });
-              if (res.ok) { status.textContent = 'Gracias — tu mensaje fue enviado.'; form.reset(); }
-              else { const json = await res.json().catch(()=>{}); status.textContent = json?.error ? json.error : 'Error al enviar.'; }
-            } catch (err) {
-              status.textContent = 'Error de red. Intenta más tarde.';
-            }
-            setTimeout(()=>{ status.hidden = true; status.textContent = ''; }, 5000);
-          });
-        })();
-      </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Animaciones en scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  };
 
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observar elementos - INCLUYE TECH CATEGORIES
+  const elementsToObserve = document.querySelectorAll(
+    '.feature-card-hex, ' +
+    '.service-card-slanted, ' +
+    '.process-step, ' +
+    '.project-item-new, ' +
+    '.testimonial-card-modern, ' +
+    '.tech-category, ' +
+    '.tech-badge, ' +
+    '.cert-badge, ' +
+    '.stat-card'
+  );
+
+  elementsToObserve.forEach(el => {
+    observer.observe(el);
+  });
+
+  // Formulario
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.hidden = false;
+      status.textContent = '📤 Enviando...';
+      
+      try {
+        const res = await fetch(form.action, {
+          method: form.method,
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        
+        if (res.ok) {
+          status.textContent = '✅ ¡Gracias! Te contactaremos pronto.';
+          status.style.color = '#22c55e';
+          form.reset();
+        } else {
+          status.textContent = '❌ Error al enviar.';
+          status.style.color = '#ef4444';
+        }
+      } catch (err) {
+        status.textContent = '❌ Error de conexión.';
+        status.style.color = '#ef4444';
+      }
+      
+      setTimeout(() => { 
+        status.hidden = true;
+        status.textContent = '';
+      }, 5000);
+    });
+  }
+
+  // Smooth scroll para botones
+  document.querySelectorAll('button[onclick*="scrollToSection"]').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      const sectionId = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+});
+</script>
