@@ -25,6 +25,13 @@ function scrollToSection(sectionId) {
 
 // Scroll Reveal Animation con Intersection Observer
 document.addEventListener('DOMContentLoaded', function() {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+    window.matchMedia('(max-width: 768px)').matches;
+
+  if (reduceMotion) {
+    document.documentElement.classList.add('reduce-motion');
+  }
+
   const revealElements = document.querySelectorAll(
     '.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale, .scroll-reveal-stagger'
   );
@@ -34,29 +41,33 @@ document.addEventListener('DOMContentLoaded', function() {
     rootMargin: '0px 0px -100px 0px'
   };
 
-  const revealOnScroll = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        // Opcional: dejar de observar después de que aparezca
-        // observer.unobserve(entry.target);
-      } else {
-        // Desaparecer cuando sale del viewport
-        entry.target.classList.remove('active');
-      }
-    });
-  }, revealOptions);
+  if (reduceMotion) {
+    revealElements.forEach(element => element.classList.add('active'));
+  } else {
+    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          // Opcional: dejar de observar después de que aparezca
+          // observer.unobserve(entry.target);
+        } else {
+          // Desaparecer cuando sale del viewport
+          entry.target.classList.remove('active');
+        }
+      });
+    }, revealOptions);
 
-  revealElements.forEach(element => revealOnScroll.observe(element));
+    revealElements.forEach(element => revealOnScroll.observe(element));
+  }
 });
 </script>
 
 <!-- HERO SECTION MODERNO -->
-<section class="hero-new" id="home">
+<section class="hero-new" id="home" >
   <div class="hero-grid-new">
     <div class="hero-content-new">
       <span class="hero-badge">
-        <i class="bi bi-lightning-fill"></i> Bienvenido a Raccorp
+        <i class="bi bi-lightning-fill" ></i> Bienvenido a Raccorp
       </span>
       <h1 class="hero-title-new">
         Soluciones Digitales<br>
@@ -594,7 +605,6 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="project-badge">Destacado</div>
           <div class="project-icon"><i class="bi bi-shop"></i></div>
           <h3>Plataforma de apartador "La ollita"</h3>
-          <p>Gestion online que aumentó la eficiencia</p>
           <div class="project-tags-new">
             <span><i class="bi bi-tag-fill"></i> Angular</span>
             <span><i class="bi bi-tag-fill"></i> Laravel</span>

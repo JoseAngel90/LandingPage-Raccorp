@@ -186,6 +186,48 @@ body::after {
   to { width: 100%; }
 }
 
+/* Reduce motion on small/responsive screens to avoid sluggishness */
+html.reduce-motion {
+  scroll-behavior: auto;
+}
+
+html.reduce-motion *,
+html.reduce-motion *::before,
+html.reduce-motion *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+html.reduce-motion body::before,
+html.reduce-motion body::after,
+html.reduce-motion .floating-element {
+  animation: none !important;
+}
+
+html.reduce-motion .floating-element,
+html.reduce-motion .feature-card-hex,
+html.reduce-motion .project-item-new,
+html.reduce-motion .tech-category,
+html.reduce-motion .tech-badge,
+html.reduce-motion .cert-badge,
+html.reduce-motion .scroll-reveal,
+html.reduce-motion .scroll-reveal-left,
+html.reduce-motion .scroll-reveal-right,
+html.reduce-motion .scroll-reveal-scale,
+html.reduce-motion .scroll-reveal-stagger {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Disable heavy background/floating animations on mobile */
+@media (max-width: 768px) {
+  body::before,
+  body::after,
+  .floating-element {
+    animation: none !important;
+  }
+}
+
 /* ===================== HERO SECTION ===================== */
 .hero-new {
   min-height: 100vh;
@@ -1716,13 +1758,15 @@ body::after {
   }
 
   .hero-new {
-    padding: 40px 15px 30px;
+    padding-bottom: 60px !important;
+    padding: 110px 15px 34px;
     min-height: auto;
   }
 
   .hero-badge {
     font-size: 0.8rem;
     padding: 6px 12px;
+    margin-top: 24px;
   }
 
   .hero-title-new {
@@ -1895,7 +1939,7 @@ body::after {
   }
 
   .hero-new {
-    padding: 30px 10px 20px;
+    padding: 130px 10px 34px;
     min-height: auto;
   }
 
@@ -1903,6 +1947,7 @@ body::after {
     font-size: 0.75rem;
     padding: 5px 10px;
     margin-bottom: 1rem;
+    margin-top: 32px;
   }
 
   .hero-badge i {
