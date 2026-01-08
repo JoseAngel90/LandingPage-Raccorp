@@ -926,17 +926,43 @@
 }
 
 /* ===================== RESPONSIVE ===================== */
-@media (max-width: 768px) {
-  .services-grid-new {
-    grid-template-columns: 1fr;
+/* TABLET 1024px - 769px */
+@media (max-width: 1024px) {
+  .services-grid-new,
+  .features-grid-new,
+  .projects-grid-new {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
+  .service-card-new,
+  .feature-item-new {
+    padding: 2rem;
+  }
+
+  .projects-grid-new {
+    grid-auto-rows: 300px;
+  }
+
+  .tech-categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stack-grid-new {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* TABLET PEQUEÑO 768px - 600px */
+@media (max-width: 768px) {
+  .services-grid-new,
   .features-grid-new {
     grid-template-columns: 1fr;
   }
 
-  .service-card-new {
-    padding: 2rem;
+  .service-card-new,
+  .feature-item-new {
+    padding: 1.8rem;
   }
 
   .service-badge {
@@ -950,37 +976,16 @@
     height: 60px;
     font-size: 1.8rem;
   }
-}
-
-@media (max-width: 600px) {
-  .services-grid-new {
-    gap: 1.5rem;
-  }
-
-  .service-card-new {
-    padding: 1.5rem;
-  }
-
-  .service-list li {
-    font-size: 0.85rem;
-  }
-
-  .feature-item-new {
-    padding: 1.5rem;
-  }
 
   .icon-wrapper {
     width: 70px;
     height: 70px;
     font-size: 2rem;
   }
-}
 
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 768px) {
   .projects-grid-new {
     grid-template-columns: 1fr;
-    grid-auto-rows: 280px;
+    grid-auto-rows: 250px;
   }
 
   .project-large {
@@ -988,7 +993,7 @@
   }
 
   .testimonials-grid-new {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .testimonial-featured {
@@ -1001,18 +1006,73 @@
   }
 
   .stack-grid-new {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
-}
 
-@media (max-width: 600px) {
-  .projects-grid-new {
-    grid-auto-rows: 250px;
+  .certifications-grid {
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
 
-  .project-content {
+  .cert-badge {
     padding: 1.5rem;
+  }
+}
+
+/* MOBILE 599px - 0px */
+@media (max-width: 599px) {
+  .services-grid-new,
+  .features-grid-new,
+  .testimonials-grid-new {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .service-card-new,
+  .feature-item-new {
+    padding: 1.5rem;
+  }
+
+  .service-card-new h3,
+  .feature-item-new h3 {
+    font-size: 1rem;
+  }
+
+  .service-card-new p,
+  .feature-item-new p {
+    font-size: 0.85rem;
+  }
+
+  .service-list li {
+    font-size: 0.8rem;
+  }
+
+  .service-badge {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .icon-circle {
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+  }
+
+  .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+  }
+
+  .projects-grid-new {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+    gap: 1rem;
+  }
+
+  .project-content {
+    padding: 1.2rem;
   }
 
   .project-stats-grid {
@@ -1020,24 +1080,72 @@
   }
 
   .stat {
-    padding: 0.5rem;
+    padding: 0.4rem;
+    font-size: 0.75rem;
   }
 
   .stat-number {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .project-info-new h3 {
+    font-size: 0.95rem;
+  }
+
+  .project-info-new p {
+    font-size: 0.8rem;
+  }
+
+  .testimonials-grid-new {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-featured {
+    grid-column: span 1;
   }
 
   .testimonials-stats {
-    padding: 2rem 1rem;
-    gap: 1.5rem;
+    padding: 1.5rem;
+    gap: 1rem;
   }
 
   .stat-value {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .tech-categories {
+    grid-template-columns: 1fr;
   }
 
   .stack-grid-new {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .tech-badge {
+    padding: 0.8rem;
+  }
+
+  .tech-card-hover i {
+    font-size: 1.5rem;
+  }
+
+  .tech-card-hover span {
+    font-size: 0.8rem;
+  }
+
+  .tech-level {
+    font-size: 0.65rem;
+  }
+
+  .certifications-section {
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+  }
+
+  .certifications-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
   }
 
   .certifications-grid {
@@ -1046,7 +1154,40 @@
   }
 
   .cert-badge {
-    padding: 1.5rem;
+    padding: 1.2rem;
+    gap: 0.6rem;
+  }
+
+  .cert-badge i {
+    font-size: 2rem;
+  }
+
+  .cert-badge span {
+    font-size: 0.8rem;
+  }
+}
+
+/* EXTRA PEQUEÑO 359px - 0px */
+@media (max-width: 359px) {
+  .services-grid-new,
+  .features-grid-new,
+  .testimonials-grid-new,
+  .projects-grid-new,
+  .stack-grid-new {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card-new,
+  .feature-item-new {
+    padding: 1.2rem;
+  }
+
+  .projects-grid-new {
+    grid-auto-rows: 180px;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1379,7 +1520,7 @@
   }
 }
 
-/* ===================== RESPONSIVE ===================== */
+/* ===================== RESPONSIVE DESKTOP ===================== */
 @media (max-width: 768px) {
   .services-grid-new {
     grid-template-columns: 1fr;
@@ -1423,5 +1564,709 @@
 .hero-logo img {
   max-width: 140px;
   height: auto;
+}
+
+/* ===================== TARJETA HERO - DISEÑO RESPONSIVO ===================== */
+
+/* Tablet (1024px - 769px) */
+@media (max-width: 1024px) {
+  .hero-card-visual {
+    gap: 1.2rem;
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .card-item {
+    padding: 0.9rem;
+    gap: 0.8rem;
+    border-radius: 10px;
+  }
+
+  .card-item i {
+    font-size: 1.3rem;
+  }
+
+  .card-item span {
+    font-size: 0.95rem;
+  }
+
+  .hero-logo img {
+    max-width: 120px;
+  }
+}
+
+/* Tablet Pequeño (768px - 600px) - DISEÑO ALTERNATIVO */
+@media (max-width: 768px) {
+  /* La tarjeta cambia a grid horizontal compacto */
+  .hero-card-visual {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    padding: 1.2rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .card-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.8rem;
+    gap: 0.5rem;
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 10px;
+    border-left: none;
+    border-top: 2px solid var(--primary);
+    justify-content: flex-start;
+  }
+
+  .card-item:hover {
+    transform: translateY(-5px);
+    background: rgba(59, 130, 246, 0.15);
+    border-top-color: var(--accent);
+  }
+
+  .card-item i {
+    font-size: 1.8rem;
+    color: var(--secondary);
+  }
+
+  .card-item span {
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  .hero-logo {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  .hero-logo img {
+    max-width: 100px;
+    height: auto;
+  }
+}
+
+/* Móvil (599px - 360px) - DISEÑO MÁS COMPACTO */
+@media (max-width: 599px) {
+  .hero-card-visual {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+  }
+
+  .card-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.7rem;
+    gap: 0.4rem;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(26, 31, 58, 0.5) 100%);
+    border-radius: 8px;
+    border-left: none;
+    border-top: 2px solid var(--secondary);
+  }
+
+  .card-item:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.1) 100%);
+  }
+
+  .card-item i {
+    font-size: 1.5rem;
+    color: #8b5cf6;
+  }
+
+  .card-item span {
+    font-size: 0.7rem;
+  }
+}
+
+/* Móvil Ultra Pequeño (359px y menos) */
+@media (max-width: 359px) {
+  .hero-card-visual {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding: 0.8rem;
+  }
+
+  .card-item {
+    padding: 0.6rem;
+    gap: 0.3rem;
+  }
+
+  .card-item i {
+    font-size: 1.3rem;
+  }
+
+  .card-item span {
+    font-size: 0.65rem;
+  }
+}
+@media (max-width: 1024px) {
+  /* Hero adaptado */
+  .hero-new {
+    min-height: 80vh;
+    padding: 60px 20px 40px;
+  }
+
+  .hero-grid-new {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-visual-new {
+    height: 300px;
+  }
+
+  /* Features en tarjetas compactas */
+  .feature-item-new {
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .icon-wrapper {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .feature-item-new h3,
+  .feature-item-new p {
+    text-align: left;
+  }
+
+  /* Servicios en cards minimalistas */
+  .services-grid-new {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .service-card-new {
+    text-align: center;
+    padding: 1.5rem;
+  }
+}
+
+/* TABLET PEQUEÑO / MOBILE LANDSCAPE (768px - 600px) */
+@media (max-width: 768px) {
+  /* Hero rediseñado */
+  .hero-new {
+    min-height: auto;
+    padding: 50px 15px 30px;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    width: fit-content;
+  }
+
+  .hero-title-new {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-subtitle-new {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-buttons-new {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-primary-new,
+  .btn-secondary-new {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .btn-primary-new i,
+  .btn-secondary-new i {
+    margin-bottom: 0.3rem;
+  }
+
+  /* Métricas en fila horizontal */
+  .hero-metrics {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+    text-align: center;
+  }
+
+  .metric {
+    padding: 0.8rem;
+  }
+
+  .metric h3 {
+    font-size: 1.5rem;
+  }
+
+  .metric p {
+    font-size: 0.75rem;
+  }
+
+  .metric-icon {
+    font-size: 1.3rem;
+  }
+
+  /* Features - Diseño de tarjeta vertical */
+  .features-grid-new {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .feature-item-new {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 1.2rem;
+    border-radius: 16px;
+    background: rgba(59, 130, 246, 0.05);
+  }
+
+  .icon-wrapper {
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .feature-item-new h3 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .feature-item-new p {
+    font-size: 0.85rem;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  /* Servicios - Cards apilados con badge visible */
+  .services-grid-new {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .service-card-new {
+    padding: 1.5rem;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(26, 31, 58, 0.5) 100%);
+  }
+
+  .service-card-new h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .service-card-new p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .service-list li {
+    justify-content: center;
+    font-size: 0.8rem;
+  }
+
+  .icon-circle {
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+    margin: 0 auto 1rem;
+  }
+
+  /* Projects - Una columna */
+  .projects-grid-new {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+    gap: 1rem;
+  }
+
+  .project-item-new {
+    border-radius: 12px;
+  }
+
+  .project-content {
+    padding: 1.2rem;
+  }
+
+  .project-info-new h3 {
+    font-size: 1rem;
+  }
+
+  .project-info-new p {
+    font-size: 0.8rem;
+  }
+
+  .project-tags-new span {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  /* Testimonios - Compactos */
+  .testimonials-grid-new {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .testimonial-card-new {
+    padding: 1.2rem;
+  }
+
+  .testimonial-card-new p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .stars {
+    font-size: 1rem;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+
+  .author-new h4 {
+    font-size: 0.9rem;
+  }
+
+  .author-new span {
+    font-size: 0.8rem;
+  }
+
+  /* Stack - Cards más pequeñas */
+  .stack-grid-new {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+  }
+
+  .tech-badge {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .tech-card-hover i {
+    font-size: 1.8rem;
+  }
+
+  .tech-card-hover span {
+    font-size: 0.8rem;
+  }
+
+  .tech-level {
+    font-size: 0.65rem;
+  }
+
+  /* Certificaciones - Grid 2 cols */
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .cert-badge {
+    padding: 1.2rem;
+  }
+
+  .cert-badge i {
+    font-size: 1.8rem;
+  }
+
+  .cert-badge span {
+    font-size: 0.8rem;
+  }
+}
+
+/* MÓVIL PEQUEÑO (599px - 360px) */
+@media (max-width: 599px) {
+  /* Ajuste de padding general */
+  .container-new {
+    padding: 0 10px;
+  }
+
+  /* HERO - Ultra compacto */
+  .hero-new {
+    padding: 40px 10px 20px;
+  }
+
+  .hero-badge {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-badge i {
+    font-size: 0.75rem;
+  }
+
+  .hero-title-new {
+    font-size: 1.6rem;
+    line-height: 1.25;
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-subtitle-new {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
+  }
+
+  .hero-buttons-new {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .btn-primary-new,
+  .btn-secondary-new {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .hero-metrics {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  .metric {
+    padding: 0.6rem;
+  }
+
+  .metric h3 {
+    font-size: 1.3rem;
+  }
+
+  .metric p {
+    font-size: 0.7rem;
+  }
+
+  .metric-icon {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  /* FEATURES - Vertical compacto */
+  .features-grid-new {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .feature-item-new {
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+
+  .icon-wrapper {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .feature-item-new h3 {
+    font-size: 1rem;
+  }
+
+  .feature-item-new p {
+    font-size: 0.8rem;
+  }
+
+  /* SERVICIOS - Full width cards */
+  .services-grid-new {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .service-card-new {
+    padding: 1.2rem;
+  }
+
+  .service-card-new h3 {
+    font-size: 1rem;
+  }
+
+  .service-card-new p {
+    font-size: 0.8rem;
+  }
+
+  .service-list li {
+    font-size: 0.75rem;
+  }
+
+  .icon-circle {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+
+  .service-badge {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  /* PROYECTOS - Tall cards */
+  .projects-grid-new {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+    gap: 0.8rem;
+  }
+
+  .project-content {
+    padding: 1rem;
+  }
+
+  .project-icon {
+    font-size: 1.8rem;
+  }
+
+  .project-info-new h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .project-info-new p {
+    font-size: 0.75rem;
+  }
+
+  .project-tags-new span {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.65rem;
+  }
+
+  /* TESTIMONIOS - Minimal */
+  .testimonials-grid-new {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .testimonial-card-new {
+    padding: 1rem;
+  }
+
+  .testimonial-card-new p {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .stars {
+    font-size: 0.9rem;
+  }
+
+  .avatar {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+
+  .author-new h4 {
+    font-size: 0.85rem;
+  }
+
+  .author-new span {
+    font-size: 0.75rem;
+  }
+
+  /* STACK - 2 columnas */
+  .stack-grid-new {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  .tech-badge {
+    padding: 0.8rem;
+    border-radius: 8px;
+  }
+
+  .tech-card-hover i {
+    font-size: 1.5rem;
+  }
+
+  .tech-card-hover span {
+    font-size: 0.75rem;
+  }
+
+  /* CERTIFICACIONES - Stack vertical */
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .cert-badge {
+    padding: 1rem;
+  }
+
+  .cert-badge i {
+    font-size: 1.5rem;
+  }
+
+  .cert-badge span {
+    font-size: 0.75rem;
+  }
+}
+
+/* MÓVIL ULTRA PEQUEÑO (359px y menos) */
+@media (max-width: 359px) {
+  .hero-title-new {
+    font-size: 1.4rem;
+  }
+
+  .hero-buttons-new {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .hero-metrics {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .metric h3 {
+    font-size: 1.2rem;
+  }
+
+  .features-grid-new,
+  .services-grid-new,
+  .projects-grid-new,
+  .testimonials-grid-new {
+    gap: 0.6rem;
+  }
+
+  .stack-grid-new {
+    grid-template-columns: 1fr;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
 }
 

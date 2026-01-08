@@ -21,6 +21,118 @@ html, body {
   line-height: 1.6;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* ===================== FONDO ESPACIAL ANIMADO ===================== */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(2px 2px at 10% 20%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(2px 2px at 25% 40%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 50% 10%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 75% 30%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(2px 2px at 85% 70%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 40% 80%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 15% 60%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(2px 2px at 90% 45%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 60% 95%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 30% 15%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 5% 35%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 65% 25%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 95% 55%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 45% 50%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(2px 2px at 20% 85%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 80% 15%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 35% 65%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(2px 2px at 55% 75%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 12% 45%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 70% 60%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(2px 2px at 92% 28%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 38% 22%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 68% 88%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 18% 72%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 82% 42%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 48% 8%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(2px 2px at 28% 52%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 58% 38%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 8% 78%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(2px 2px at 78% 92%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 42% 18%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 88% 68%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(2px 2px at 32% 32%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 62% 58%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 22% 98%, rgba(255, 255, 255, 0.8), transparent);
+  background-size: 200% 200%;
+  animation: starsMove 80s linear infinite;
+  opacity: 0.5;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(ellipse at 20% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(139, 92, 246, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 55%),
+    radial-gradient(circle at 30% 80%, rgba(59, 130, 246, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 70% 20%, rgba(139, 92, 246, 0.05) 0%, transparent 45%);
+  animation: galaxyFloat 60s ease-in-out infinite;
+  opacity: 0.7;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes starsMove {
+  0% {
+    transform: translate(0, 0);
+    background-position: 0% 0%;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes galaxyFloat {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(30px, 20px) rotate(3deg) scale(1.05);
+  }
+  50% {
+    transform: translate(0, 40px) rotate(0deg) scale(1);
+  }
+  75% {
+    transform: translate(-30px, 20px) rotate(-3deg) scale(1.05);
+  }
+}
+
+/* Asegura que todo el contenido esté por encima del fondo */
+.navbar-modern,
+.hero-new,
+.features-new,
+.services-new,
+.projects-new,
+.testimonials-new,
+.stack-new,
+.cta-new,
+.contact-new,
+.footer-modern {
+  position: relative;
+  z-index: 1;
 }
 
 .container-new {
@@ -1477,7 +1589,78 @@ html, body {
 }
 
 /* ===================== RESPONSIVE ===================== */
-@media (max-width: 968px) {
+/* TABLET (1024px - 769px) */
+@media (max-width: 1024px) {
+  .container-new {
+    padding: 0 15px;
+  }
+
+  .hero-new {
+    padding: 60px 20px 40px;
+    min-height: auto;
+  }
+
+  .hero-grid-new {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-content-new {
+    padding: 0;
+  }
+
+  .hero-visual-new {
+    height: 350px;
+  }
+
+  .hero-title-new {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  .hero-metrics {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .metric {
+    text-align: center;
+  }
+
+  .metric h3 {
+    font-size: 2rem;
+  }
+
+  .features-new,
+  .services-new,
+  .stack-new,
+  .cta-new,
+  .contact-new {
+    padding: 60px 20px;
+  }
+
+  .features-grid-new,
+  .services-grid-new,
+  .testimonials-grid-new {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .stack-grid-new {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .projects-grid-new {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    grid-auto-rows: 280px;
+  }
+
+  .project-item-new.large {
+    grid-column: span 2;
+  }
+
   .timeline-line {
     left: 40px;
   }
@@ -1513,64 +1696,455 @@ html, body {
     gap: 1.5rem;
   }
 
-  .hero-grid-new {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .hero-visual-new {
-    display: none;
-  }
-
-  .hero-metrics {
-    grid-template-columns: 1fr;
-  }
-
-  .services-grid-new {
-    grid-template-columns: 1fr;
-  }
-
-  .testimonials-grid-new {
-    grid-template-columns: 1fr;
-  }
-
   .btn-large {
     max-width: 100%;
   }
+
+  .contact-form-modern {
+    padding: 2rem;
+  }
 }
 
-@media (max-width: 600px) {
-  .timeline-line {
-    left: 25px;
+/* TABLET PEQUEÑO Y LANDSCAPE (768px - 600px) */
+@media (max-width: 768px) {
+  html, body {
+    font-size: 15px;
   }
 
-  .process-step {
-    margin-left: 80px;
-    padding-left: 1rem;
+  .container-new {
+    padding: 0 12px;
+  }
+
+  .hero-new {
+    padding: 40px 15px 30px;
+    min-height: auto;
+  }
+
+  .hero-badge {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .hero-title-new {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle-new {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-buttons-new {
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn-primary-new,
+  .btn-secondary-new {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .hero-metrics {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .metric h3 {
+    font-size: 1.8rem;
+  }
+
+  .metric p {
+    font-size: 0.8rem;
+  }
+
+  .section-header-new {
     margin-bottom: 3rem;
   }
 
-  .step-circle {
-    width: 60px;
-    height: 60px;
-    left: -30px;
+  .section-header-new h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 0.8rem;
   }
 
-  .circle-inner {
-    font-size: 1.3rem;
+  .section-header-new p {
+    font-size: 1rem;
   }
 
-  .step-text {
+  .features-new,
+  .services-new,
+  .stack-new,
+  .cta-new,
+  .contact-new {
+    padding: 50px 15px;
+  }
+
+  .features-grid-new,
+  .services-grid-new,
+  .testimonials-grid-new {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .feature-item-new,
+  .service-card-new {
     padding: 1.5rem;
   }
 
-  .step-text h3 {
-    font-size: 1.2rem;
+  .icon-wrapper {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+
+  .feature-item-new h3,
+  .service-card-new h3 {
+    font-size: 1.1rem;
+  }
+
+  .feature-item-new p,
+  .service-card-new p {
+    font-size: 0.9rem;
+  }
+
+  .projects-grid-new {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    grid-auto-rows: 250px;
+  }
+
+  .project-item-new.large {
+    grid-column: span 1;
+  }
+
+  .stack-grid-new {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .tech-badge {
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .tech-card-hover i {
+    font-size: 1.5rem;
+  }
+
+  .cta-content-new h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .cta-content-new p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-icon {
+    font-size: 3rem;
+  }
+
+  .contact-wrapper {
+    max-width: 100%;
+  }
+
+  .contact-form-modern {
+    padding: 1.5rem;
+  }
+
+  .form-row-new {
+    gap: 1rem;
+  }
+
+  .timeline-line {
+    left: 30px;
+  }
+
+  .process-step {
+    margin-left: 100px;
+    padding-left: 1.5rem;
+  }
+
+  .step-circle {
+    left: -50px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .circle-inner {
+    font-size: 1.5rem;
   }
 
   .timeline-steps-horizontal {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+}
+
+/* MOBILE (599px - 0px) */
+@media (max-width: 599px) {
+  html, body {
+    font-size: 14px;
+  }
+
+  .container-new {
+    padding: 0 10px;
+  }
+
+  .hero-new {
+    padding: 30px 10px 20px;
+    min-height: auto;
+  }
+
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    margin-bottom: 1rem;
+  }
+
+  .hero-badge i {
+    font-size: 0.85rem;
+  }
+
+  .hero-title-new {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-subtitle-new {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    max-width: 100%;
+  }
+
+  .hero-buttons-new {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-primary-new,
+  .btn-secondary-new {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    justify-content: center;
+  }
+
+  .hero-metrics {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .metric {
+    padding: 1rem 0;
+  }
+
+  .metric h3 {
+    font-size: 1.5rem;
+  }
+
+  .metric-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .metric p {
+    font-size: 0.75rem;
+  }
+
+  .section-header-new {
+    margin-bottom: 2rem;
+  }
+
+  .section-header-new h2 {
+    font-size: clamp(1.3rem, 5vw, 2rem);
+    margin-bottom: 0.6rem;
+  }
+
+  .section-header-new p {
+    font-size: 0.9rem;
+  }
+
+  .header-divider {
+    width: 50px;
+  }
+
+  .features-new,
+  .services-new,
+  .stack-new,
+  .cta-new,
+  .contact-new {
+    padding: 40px 10px;
+  }
+
+  .features-grid-new,
+  .services-grid-new,
+  .testimonials-grid-new,
+  .projects-grid-new {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .feature-item-new,
+  .service-card-new,
+  .project-item-new,
+  .testimonial-card-new {
+    padding: 1rem;
+  }
+
+  .feature-item-new h3,
+  .service-card-new h3,
+  .project-info-new h3 {
+    font-size: 1rem;
+  }
+
+  .feature-item-new p,
+  .service-card-new p,
+  .project-info-new p {
+    font-size: 0.85rem;
+  }
+
+  .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .projects-grid-new {
+    grid-auto-rows: 200px;
+  }
+
+  .project-icon {
+    font-size: 2rem;
+  }
+
+  .project-tags-new span {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .stack-grid-new {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .tech-badge {
+    padding: 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .tech-card-hover i {
+    font-size: 1.3rem;
+  }
+
+  .testimonial-card-new {
+    padding: 1.2rem;
+  }
+
+  .testimonial-card-new p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .stars {
+    font-size: 1rem;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+
+  .author-new h4 {
+    font-size: 0.9rem;
+  }
+
+  .author-new span {
+    font-size: 0.8rem;
+  }
+
+  .cta-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-content-new h2 {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .cta-content-new p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-wrapper {
+    max-width: 100%;
+  }
+
+  .contact-form-modern {
+    padding: 1.2rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .contact-form-new input,
+  .contact-form-new textarea {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+
+  .form-row-new {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .btn-submit {
+    width: 100%;
+    max-width: none;
+  }
+
+  .timeline-line {
+    left: 20px;
+  }
+
+  .process-step {
+    margin-left: 70px;
+    padding-left: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .step-circle {
+    left: -35px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .circle-inner {
+    font-size: 1.2rem;
+  }
+
+  .step-text {
+    padding: 1rem;
+  }
+
+  .step-text h3 {
+    font-size: 1rem;
+  }
+
+  .timeline-steps-horizontal {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
   }
 
   .step-dot {
@@ -1583,20 +2157,36 @@ html, body {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+}
 
-  .hero-title-new {
-    font-size: 2rem;
+/* EXTRA PEQUEÑO (359px y menos) */
+@media (max-width: 359px) {
+  .hero-buttons-new {
+    flex-direction: column;
+  }
+
+  .btn-primary-new,
+  .btn-secondary-new {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .hero-metrics {
+    grid-template-columns: 1fr;
   }
 
   .section-header-new h2 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
+  }
+
+  .features-grid-new,
+  .services-grid-new,
+  .testimonials-grid-new {
+    gap: 0.8rem;
   }
 
   .stack-grid-new {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contact-form-modern {
-    padding: 1.5rem;
+    grid-template-columns: 1fr;
   }
 }

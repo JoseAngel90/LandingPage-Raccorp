@@ -9,6 +9,33 @@ function scrollToSection(sectionId) {
     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
+
+// Scroll Reveal Animation con Intersection Observer
+document.addEventListener('DOMContentLoaded', function() {
+  const revealElements = document.querySelectorAll(
+    '.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale, .scroll-reveal-stagger'
+  );
+
+  const revealOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        // Opcional: dejar de observar después de que aparezca
+        // observer.unobserve(entry.target);
+      } else {
+        // Desaparecer cuando sale del viewport
+        entry.target.classList.remove('active');
+      }
+    });
+  }, revealOptions);
+
+  revealElements.forEach(element => revealOnScroll.observe(element));
+});
 </script>
 
 <!-- HERO SECTION MODERNO -->
@@ -65,15 +92,15 @@ function scrollToSection(sectionId) {
       <div class="hero-card-visual">
         <div class="card-item">
           <i class="bi bi-code-square"></i>
-          <span>Code</span>
+          <span>Codificación</span>
         </div>
         <div class="card-item">
           <i class="bi bi-palette2"></i>
-          <span>Design</span>
+          <span>Diseño</span>
         </div>
         <div class="card-item">
           <i class="bi bi-gear-fill"></i>
-          <span>Deploy</span>
+          <span>Despliegue</span>
         </div>
 
         <div class="hero-logo">
