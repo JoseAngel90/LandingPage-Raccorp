@@ -1,3 +1,16 @@
+<!-- CONTADOR DE VISITAS FLOTANTE -->
+<div class="visits-counter-widget">
+  <div class="counter-content">
+    <div class="counter-icon">
+      <i class="bi bi-eye-fill"></i>
+    </div>
+    <div class="counter-info">
+      <div class="counter-label">Visitas Hoy</div>
+      <div class="counter-number" id="visitsCounter">0</div>
+    </div>
+  </div>
+</div>
+
 <!-- Bootstrap Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
@@ -50,6 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
         <span class="gradient-text">De Próxima Generación</span>
       </h1>
       <p class="hero-subtitle-new">Transformamos tu visión en soluciones tecnológicas innovadoras que generan resultados reales y medibles</p>
+     
+      
       <!-- Reemplaza los botones del HERO con estos -->
       <div class="hero-buttons-new">
         <a href="#contact-section" class="btn-primary-new" style="text-decoration: none;">
@@ -109,7 +124,130 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </div>
   </div>
+
+
 </section>
+
+<!-- SCRIPT DEL MODAL Y CONTADOR DE BIENVENIDA -->
+<script>
+  (function() {
+    // Clave para localStorage
+    const VISIT_KEY = 'raccorp_visit_count';
+    const SESSION_KEY = 'raccorp_session_active';
+    const MODAL_SHOWN_KEY = 'raccorp_modal_shown_today';
+    const TODAY_VISITS_KEY = 'raccorp_visits_today';
+    const TODAY_DATE_KEY = 'raccorp_today_date';
+    
+    // Obtener contador total de visitas
+    let visitCount = parseInt(localStorage.getItem(VISIT_KEY)) || 0;
+    
+    // Obtener visitas de hoy
+    const today = new Date().toDateString();
+    const lastDate = localStorage.getItem(TODAY_DATE_KEY);
+    let todayVisits = parseInt(localStorage.getItem(TODAY_VISITS_KEY)) || 0;
+    
+    // Si es un nuevo día, resetear contador de hoy
+    if (lastDate !== today) {
+      todayVisits = 0;
+      localStorage.setItem(TODAY_DATE_KEY, today);
+    }
+    
+    // Verificar si es una nueva sesión
+    const isNewSession = !sessionStorage.getItem(SESSION_KEY);
+    
+    if (isNewSession) {
+      // Incrementar contador de visitas totales
+      visitCount++;
+      localStorage.setItem(VISIT_KEY, visitCount);
+      sessionStorage.setItem(SESSION_KEY, 'true');
+      
+      // Incrementar visitas de hoy
+      todayVisits++;
+      localStorage.setItem(TODAY_VISITS_KEY, todayVisits);
+    }
+    
+    // Mostrar contador en el widget
+    function updateVisitsCounter() {
+      const counterElement = document.getElementById('visitsCounter');
+      if (counterElement) {
+        counterElement.textContent = todayVisits.toLocaleString('es-ES');
+      }
+    }
+    
+    // Mostrar modal solo una vez por día
+    function shouldShowModal() {
+      const today = new Date().toDateString();
+      const lastShown = localStorage.getItem(MODAL_SHOWN_KEY);
+      return lastShown !== today;
+    }
+    
+    // Animar el contador con números
+    function animateCounter(target, elementId, duration = 1200) {
+      const element = document.getElementById(elementId);
+      if (!element) return;
+      
+      const start = 0;
+      const increment = target / (duration / 16);
+      let current = start;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          element.textContent = target.toLocaleString('es-ES');
+          clearInterval(timer);
+        } else {
+          element.textContent = Math.floor(current).toLocaleString('es-ES');
+        }
+      }, 16);
+    }
+    
+    // Mostrar modal de bienvenida
+    function showWelcomeModal() {
+      const modal = document.getElementById('welcomeModal');
+      const welcomeCount = document.getElementById('welcomeCount');
+      
+      if (modal && shouldShowModal()) {
+        // Esperar a que el DOM esté listo
+        setTimeout(() => {
+          modal.classList.add('show');
+          welcomeCount.textContent = visitCount.toLocaleString('es-ES');
+          animateCounter(visitCount, 'welcomeCount', 1000);
+          
+          // Guardar que el modal fue mostrado hoy
+          const today = new Date().toDateString();
+          localStorage.setItem(MODAL_SHOWN_KEY, today);
+        }, 500);
+      }
+    }
+    
+    // Función para cerrar modal
+    window.closeWelcome = function() {
+      const modal = document.getElementById('welcomeModal');
+      if (modal) {
+        modal.classList.remove('show');
+      }
+    };
+    
+    // Cerrar modal al hacer click fuera
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('welcomeModal');
+      if (event.target === modal) {
+        closeWelcome();
+      }
+    });
+    
+    // Mostrar modal y actualizar contador cuando el DOM esté listo
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        showWelcomeModal();
+        updateVisitsCounter();
+      });
+    } else {
+      showWelcomeModal();
+      updateVisitsCounter();
+    }
+  })();
+</script>
 
 <!-- CARACTERÍSTICAS SECTION -->
 <section class="features-new" id="features-section">

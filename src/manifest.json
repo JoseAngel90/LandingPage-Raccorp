@@ -1,0 +1,27 @@
+{
+  "name": "Raccorp - Soluciones Digitales",
+  "short_name": "Raccorp",
+  "description": "Soluciones digitales de próxima generación. Desarrollo web, apps móviles y más.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "technology", "productivity"],
+  "lang": "es",
+  "dir": "ltr"
+}
